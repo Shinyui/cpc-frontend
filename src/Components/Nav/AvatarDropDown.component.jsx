@@ -74,9 +74,7 @@ const AvatarDropDown = () => {
             {renderRoleChip()}
           </div>
         </DropdownItem>
-        <DropdownItem onPress={() => navigate("/bind")} key="analytics">
-          綁定身份
-        </DropdownItem>
+        <DropdownItem key="analytics">綁定身份</DropdownItem>
         <DropdownItem key="settings">任務牆</DropdownItem>
         <DropdownItem onPress={() => navigate("/roulette")} key="team_settings">
           輪盤+
