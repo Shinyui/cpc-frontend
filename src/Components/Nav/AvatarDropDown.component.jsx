@@ -78,9 +78,7 @@ const AvatarDropDown = () => {
           綁定身份
         </DropdownItem>
         <DropdownItem key="settings">任務牆</DropdownItem>
-        <DropdownItem onPress={() => navigate("/roulette")} key="team_settings">
-          輪盤+
-        </DropdownItem>
+        <DropdownItem key="team_settings">輪盤+</DropdownItem>
         <DropdownItem
           href="#"
           key="logout"
