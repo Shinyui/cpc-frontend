@@ -12,7 +12,15 @@ API.interceptors.request.use(
     return config;
   },
   (error) => {
-    return Promise.reject(error);
+    toast.error("something went wrong", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   }
 );
 

@@ -7,7 +7,6 @@ import {
   Avatar,
   Chip,
 } from "@nextui-org/react";
-
 import _ from "lodash";
 
 import { useNavigate } from "react-router-dom";
@@ -30,6 +29,7 @@ const AvatarDropDown = () => {
       domain: process.env.REACT_APP_HOST,
     });
     dispatch(logout());
+    navigate("/");
   };
 
   const renderRoleChip = () => {
