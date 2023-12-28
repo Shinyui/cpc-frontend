@@ -62,7 +62,6 @@ const Nav = () => {
         color="primary"
         variant="flat"
         onPress={() => googleLogin()}
-        isDisabled={true}
       >
         登入 / 註冊
       </Button>
