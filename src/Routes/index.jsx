@@ -9,6 +9,8 @@ import Bind from "../page/Bind.page";
 import RoulettePlus from "../page/RoulettePlus.page";
 import Blog from "../page/Blog.page";
 import BlogPost from "../page/BlogPost.page";
+import Courses from "../page/Courses.page";
+import Course from "../page/Course.page";
 
 const Routers = () => {
   return (
@@ -37,6 +39,8 @@ const Routers = () => {
         />
         <Route path="/blogs" element={<Blog />} />
         <Route path="/blogs/:id" element={<BlogPost />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:id" element={<Course />} />
       </Route>
     </Routes>
   );
