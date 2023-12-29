@@ -1,45 +1,20 @@
 import { useEffect, useState } from "react";
-import {
-  Card,
-  CardHeader,
-  CardBody,
-  CardFooter,
-  Button,
-  Image,
-} from "@nextui-org/react";
-import { GraphQLClient, gql } from "graphql-request";
+import { Card, CardHeader, Image } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
+import { queryBlogs } from "../../graphql/query.graphql";
 
-const Blog = () => {
+const Blogs = () => {
   const [blogs, setBlogs] = useState();
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchBlogPost = async () => {
-      const graphcms = new GraphQLClient(
-        "https://api-ap-northeast-1.hygraph.com/v2/clqeptfvwhrfm01t8fidu4it8/master"
-      );
-
-      const QUERY = gql`
-        {
-          posts {
-            id
-            title
-            coverPhoto {
-              url
-            }
-          }
-        }
-      `;
-
-      const resp = await graphcms.request(QUERY);
+    const fetchBlogs = async () => {
+      const resp = await queryBlogs();
       setBlogs(resp.posts);
     };
 
-    fetchBlogPost();
+    fetchBlogs();
   }, []);
-
-  console.log(blogs);
 
   return (
     <div className="p-4">
@@ -76,4 +51,4 @@ const Blog = () => {
   );
 };
 
-export default Blog;
+export default Blogs;

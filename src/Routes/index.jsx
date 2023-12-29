@@ -7,8 +7,10 @@ import TradeSize from "../Components/Calculator/TradeSize.component";
 import TradeProfit from "../Components/Calculator/TradeProfit.component";
 import Bind from "../page/Bind.page";
 import RoulettePlus from "../page/RoulettePlus.page";
-import Blog from "../page/Blog.page";
-import BlogPost from "../page/BlogPost.page";
+import Courses from "../page/course/Courses.page";
+import Course from "../page/course/Course.page";
+import Blogs from "../page/blog/Blogs.page";
+import Blog from "../page/blog/Blog.page";
 
 const Routers = () => {
   return (
@@ -35,8 +37,10 @@ const Routers = () => {
             <ToolPage pageTitle={"分倉點位計算機"} toolComp={<TradeSize />} />
           }
         />
-        <Route path="/blogs" element={<Blog />} />
-        <Route path="/blogs/:id" element={<BlogPost />} />
+        <Route path="/blogs" element={<Blogs />} />
+        <Route path="/blogs/:id" element={<Blog />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/courses/:id" element={<Course />} />
       </Route>
     </Routes>
   );
