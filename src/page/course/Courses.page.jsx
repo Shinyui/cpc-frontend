@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Card, CardHeader, CardBody } from "@nextui-org/react";
 import { useNavigate } from "react-router-dom";
-import { queryCourses } from "../graphql/query.graphql";
+import { queryCourses } from "../../graphql/query.graphql";
 
 const Courses = () => {
   const [courses, setCourses] = useState();

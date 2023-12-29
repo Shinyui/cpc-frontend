@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { queryCourse } from "../graphql/query.graphql";
+import { queryCourse } from "../../graphql/query.graphql";
 import { Listbox, ListboxItem } from "@nextui-org/react";
 import { useParams } from "react-router-dom";
 

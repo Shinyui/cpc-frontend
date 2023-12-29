@@ -9,8 +9,8 @@ import Bind from "../page/Bind.page";
 import RoulettePlus from "../page/RoulettePlus.page";
 import Blog from "../page/Blog.page";
 import BlogPost from "../page/BlogPost.page";
-import Courses from "../page/Courses.page";
-import Course from "../page/Course.page";
+import Courses from "../page/course/Courses.page";
+import Course from "../page/course/Course.page";
 
 const Routers = () => {
   return (
