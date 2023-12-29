@@ -11,6 +11,7 @@ import {
 import { useGoogleLogin } from "@react-oauth/google";
 import { API, uninterceptedAxiosInstance } from "../../axios/axios.js";
 import Cookies from "js-cookie";
+import { toast } from "react-toastify";
 
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUser } from "../../store/user.slice.js";
@@ -49,6 +50,16 @@ const Nav = () => {
       });
 
       dispatch(fetchUser());
+
+      toast.success("成功登入", {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+      });
     },
     onError: (errorResponse) => console.log(errorResponse),
   });

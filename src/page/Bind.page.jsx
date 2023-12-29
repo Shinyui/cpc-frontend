@@ -5,6 +5,7 @@ import { z } from "zod";
 import { API } from "../axios/axios";
 import { useSelector, useDispatch } from "react-redux";
 import { fetchUser } from "../store/user.slice";
+import { toast } from "react-toastify";
 
 const Bind = () => {
   const user = useSelector((state) => state.user.user);
@@ -31,6 +32,16 @@ const Bind = () => {
     await API.post("/api/auth/bind/bitget", { uid: result.data.uid });
 
     dispatch(fetchUser());
+
+    toast.success("成功送出", {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
   };
 
   const renderFormBtn = () => {
@@ -62,7 +73,7 @@ const Bind = () => {
         <Button
           isDisabled={true}
           type="submit"
-          className="mb-10 w-full"
+          className="mb-10 w-full text-white"
           color="success"
         >
           驗證成功
