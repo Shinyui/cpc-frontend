@@ -7,17 +7,10 @@ import TradeSize from "../Components/Calculator/TradeSize.component";
 import TradeProfit from "../Components/Calculator/TradeProfit.component";
 import Bind from "../page/Bind.page";
 import RoulettePlus from "../page/RoulettePlus.page";
-<<<<<<< HEAD
-import Blog from "../page/Blog.page";
-import BlogPost from "../page/BlogPost.page";
 import Courses from "../page/course/Courses.page";
 import Course from "../page/course/Course.page";
-=======
 import Blogs from "../page/blog/Blogs.page";
 import Blog from "../page/blog/Blog.page";
-import Courses from "../page/Courses.page";
-import Course from "../page/Course.page";
->>>>>>> develop
 
 const Routers = () => {
   return (
