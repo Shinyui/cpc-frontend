@@ -16,7 +16,7 @@ const Blog = () => {
     };
 
     fetchBlog();
-  }, []);
+  }, [id]);
 
   return (
     <div className="lg:w-8/12 md:w-10/12 sm:w-12/12 gap-4 px-8 mx-auto">
