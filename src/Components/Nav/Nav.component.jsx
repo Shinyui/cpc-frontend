@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Navbar,
   NavbarBrand,
@@ -25,11 +25,14 @@ import AllToolsDropdown from "./AllToolsDropdown.component.jsx";
 
 const Nav = () => {
   const user = useSelector((state) => state.user.user);
+  const [isLoading, setIsLoading] = useState(false);
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const googleLogin = useGoogleLogin({
     onSuccess: async (tokenResponse) => {
+      setIsLoading(true);
+
       const userInfo = await uninterceptedAxiosInstance.get(
         "https://www.googleapis.com/oauth2/v3/userinfo",
         { headers: { Authorization: `Bearer ${tokenResponse.access_token}` } }
@@ -60,6 +63,8 @@ const Nav = () => {
         draggable: true,
         progress: undefined,
       });
+
+      setIsLoading(false);
     },
     onError: (errorResponse) => console.log(errorResponse),
   });
@@ -73,8 +78,9 @@ const Nav = () => {
         color="primary"
         variant="flat"
         onPress={() => googleLogin()}
+        isLoading={isLoading}
       >
-        登入 / 註冊
+        {isLoading ? "登入中" : "登入 / 註冊"}
       </Button>
     );
   };
