@@ -103,8 +103,11 @@ const Nav = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link color="foreground" onPress={() => navigate("/blogs")}>
-            CPC 知識庫
+          <Link
+            color="foreground"
+            onPress={() => navigate("https://blog.cryptopioneer.app/")}
+          >
+            CPC 部落格
           </Link>
         </NavbarItem>
         <NavbarItem>
