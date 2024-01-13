@@ -8,6 +8,16 @@ import navLinks from "./nav-links.js";
 const HamburgerMenu = () => {
   return (
     <NavbarMenu>
+      <NavbarMenuItem key={"blog"}>
+        <Link
+          href="https://blog.cryptopioneer.app/"
+          color={"foreground"}
+          className="w-full"
+          size="lg"
+        >
+          CPC 部落格
+        </Link>
+      </NavbarMenuItem>
       {navItems.map((item, index) => (
         <NavbarMenuItem key={`${item}-${index}`}>
           <LinkReacRouterDom to={`${navLinks[index]}`}>
