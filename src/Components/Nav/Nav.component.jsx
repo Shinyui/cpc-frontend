@@ -103,10 +103,7 @@ const Nav = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
-          <Link
-            color="foreground"
-            onPress={() => navigate("https://blog.cryptopioneer.app/")}
-          >
+          <Link color="foreground" href="https://blog.cryptopioneer.app/">
             CPC 部落格
           </Link>
         </NavbarItem>
