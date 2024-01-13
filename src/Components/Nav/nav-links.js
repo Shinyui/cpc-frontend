@@ -1,8 +1,3 @@
-const navLinks = [
-  "/blogs",
-  "/calculate/tradesize",
-  "/calculate/tradeprofit",
-  "#",
-];
+const navLinks = ["/calculate/tradesize", "/calculate/tradeprofit", "#"];
 
 export default navLinks;
