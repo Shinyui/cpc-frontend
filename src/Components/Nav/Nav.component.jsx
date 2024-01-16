@@ -117,7 +117,7 @@ const Nav = () => {
         </NavbarItem>
         <NavbarItem>
           <Link
-            onPress={() => navigate("/calculate/tradeprofit")}
+            onPress={() => navigate("/calculate/tradesize")}
             color="foreground"
           >
             倉位價值計算機
