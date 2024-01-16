@@ -8,6 +8,16 @@ import navLinks from "./nav-links.js";
 const HamburgerMenu = () => {
   return (
     <NavbarMenu>
+      <NavbarMenuItem key={"ecshop"}>
+        <Link
+          href="https://cryptopioneercommunity.cashier.ecpay.com.tw/"
+          color={"foreground"}
+          className="w-full"
+          size="lg"
+        >
+          CPC 商店
+        </Link>
+      </NavbarMenuItem>
       <NavbarMenuItem key={"blog"}>
         <Link
           href="https://blog.cryptopioneer.app/"

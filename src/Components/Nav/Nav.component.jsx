@@ -103,13 +103,21 @@ const Nav = () => {
 
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
+          <Link
+            color="foreground"
+            href="https://cryptopioneercommunity.cashier.ecpay.com.tw/"
+          >
+            CPC 商店
+          </Link>
+        </NavbarItem>
+        <NavbarItem>
           <Link color="foreground" href="https://blog.cryptopioneer.app/">
             CPC 部落格
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link
-            onPress={() => navigate("/calculate/tradeprofit")}
+            onPress={() => navigate("/calculate/tradesize")}
             color="foreground"
           >
             倉位價值計算機
